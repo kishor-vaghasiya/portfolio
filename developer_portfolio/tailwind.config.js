@@ -1,71 +1,68 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./pages/*.{html,js}", "./index.html"],
+  content: [
+    "./pages/**/*.{html,js}",
+    "./**/*.{html,js}"
+  ],
   theme: {
     extend: {
       colors: {
-        primary: {
-          DEFAULT: "#1e40af", // blue-800
-          50: "#eff6ff", // blue-50
-          100: "#dbeafe", // blue-100
-          500: "#3b82f6", // blue-500
-          600: "#2563eb", // blue-600
-          700: "#1d4ed8", // blue-700
-          800: "#1e40af", // blue-800
-          900: "#1e3a8a", // blue-900
-        },
-        secondary: {
-          DEFAULT: "#64748b", // slate-500
-          50: "#f8fafc", // slate-50
-          100: "#f1f5f9", // slate-100
-          200: "#e2e8f0", // slate-200
-          300: "#cbd5e1", // slate-300
-          400: "#94a3b8", // slate-400
-          500: "#64748b", // slate-500
-          600: "#475569", // slate-600
-          700: "#334155", // slate-700
-          800: "#1e293b", // slate-800
-          900: "#0f172a", // slate-900
-        },
-        accent: {
-          DEFAULT: "#3b82f6", // blue-500
-          50: "#eff6ff", // blue-50
-          100: "#dbeafe", // blue-100
-          500: "#3b82f6", // blue-500
-          600: "#2563eb", // blue-600
-        },
-        background: "#ffffff", // white
-        surface: "#f8fafc", // slate-50
-        text: {
-          primary: "#0f172a", // slate-900
-          secondary: "#475569", // slate-600
-        },
-        success: {
-          DEFAULT: "#059669", // emerald-600
-          50: "#ecfdf5", // emerald-50
-          100: "#d1fae5", // emerald-100
-          500: "#10b981", // emerald-500
-          600: "#059669", // emerald-600
-        },
-        warning: {
-          DEFAULT: "#d97706", // amber-600
-          50: "#fffbeb", // amber-50
-          100: "#fef3c7", // amber-100
-          500: "#f59e0b", // amber-500
-          600: "#d97706", // amber-600
-        },
-        error: {
-          DEFAULT: "#dc2626", // red-600
-          50: "#fef2f2", // red-50
-          100: "#fee2e2", // red-100
-          500: "#ef4444", // red-500
-          600: "#dc2626", // red-600
-        },
+        primary: 'var(--color-primary)',
+        'primary-50': 'var(--color-primary-50)',
+        'primary-100': 'var(--color-primary-100)',
+        'primary-500': 'var(--color-primary-500)',
+        'primary-600': 'var(--color-primary-600)',
+        'primary-700': 'var(--color-primary-700)',
+        'primary-800': 'var(--color-primary-800)',
+        'primary-900': 'var(--color-primary-900)',
+        
+        secondary: 'var(--color-secondary)',
+        'secondary-50': 'var(--color-secondary-50)',
+        'secondary-100': 'var(--color-secondary-100)',
+        'secondary-200': 'var(--color-secondary-200)',
+        'secondary-300': 'var(--color-secondary-300)',
+        'secondary-400': 'var(--color-secondary-400)',
+        'secondary-500': 'var(--color-secondary-500)',
+        'secondary-600': 'var(--color-secondary-600)',
+        'secondary-700': 'var(--color-secondary-700)',
+        'secondary-800': 'var(--color-secondary-800)',
+        'secondary-900': 'var(--color-secondary-900)',
+        
+        accent: 'var(--color-accent)',
+        'accent-50': 'var(--color-accent-50)',
+        'accent-100': 'var(--color-accent-100)',
+        'accent-500': 'var(--color-accent-500)',
+        'accent-600': 'var(--color-accent-600)',
+        
+        background: 'var(--color-background)',
+        surface: 'var(--color-surface)',
+        
+        'text-primary': 'var(--color-text-primary)',
+        'text-secondary': 'var(--color-text-secondary)',
+        
+        success: 'var(--color-success)',
+        'success-50': 'var(--color-success-50)',
+        'success-100': 'var(--color-success-100)',
+        'success-500': 'var(--color-success-500)',
+        'success-600': 'var(--color-success-600)',
+        
+        warning: 'var(--color-warning)',
+        'warning-50': 'var(--color-warning-50)',
+        'warning-100': 'var(--color-warning-100)',
+        'warning-500': 'var(--color-warning-500)',
+        'warning-600': 'var(--color-warning-600)',
+        
+        error: 'var(--color-error)',
+        'error-50': 'var(--color-error-50)',
+        'error-100': 'var(--color-error-100)',
+        'error-500': 'var(--color-error-500)',
+        'error-600': 'var(--color-error-600)',
       },
       fontFamily: {
         sans: ['Source Sans Pro', 'sans-serif'],
         heading: ['Inter', 'sans-serif'],
-        caption: ['Roboto', 'sans-serif'],
         mono: ['JetBrains Mono', 'monospace'],
+        caption: ['Roboto', 'sans-serif'],
       },
       fontSize: {
         'fluid-xs': 'clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem)',
@@ -79,10 +76,10 @@ module.exports = {
       },
       boxShadow: {
         'elevation-1': '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
-        'elevation-2': '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-        'elevation-3': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
-        'elevation-4': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
-        'elevation-5': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+        'elevation-2': 'var(--shadow-base)',
+        'elevation-3': 'var(--shadow-md)',
+        'elevation-4': 'var(--shadow-lg)',
+        'elevation-5': 'var(--shadow-xl)',
       },
       backdropBlur: {
         'glass': '10px',

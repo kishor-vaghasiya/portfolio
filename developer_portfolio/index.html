@@ -3,90 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Developer Portfolio - Redirecting...</title>
-    <link rel="stylesheet" href="css/main.css">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            color: white;
-        }
-        
-        .loader-container {
-            text-align: center;
-            padding: 2rem;
-        }
-        
-        .loader {
-            width: 50px;
-            height: 50px;
-            border: 4px solid rgba(255, 255, 255, 0.3);
-            border-top: 4px solid white;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 1rem;
-        }
-        
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        
-        .redirect-text {
-            font-size: 1.125rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-        
-        .redirect-subtext {
-            font-size: 0.875rem;
-            opacity: 0.8;
-        }
-        
-        @media (prefers-reduced-motion: reduce) {
-            .loader {
-                animation: none;
-                border: 4px solid white;
-            }
-        }
-    </style>
+    <title>Redirecting to Portfolio</title>
+    <meta http-equiv="refresh" content="0;url=/pages/portfolio_homepage.html">
+    <script>
+        window.location.href = "/pages/portfolio_homepage.html";
+    </script>
 </head>
 <body>
-    <div class="loader-container">
-        <div class="loader"></div>
-        <div class="redirect-text">Loading Portfolio...</div>
-        <div class="redirect-subtext">Redirecting to homepage</div>
-    </div>
-
-    <script>
-        // Redirect to the portfolio homepage after a brief delay
-        setTimeout(function() {
-            window.location.href = 'pages/portfolio_homepage.html';
-        }, 2000);
-        
-        // Fallback redirect for users with JavaScript disabled
-        document.addEventListener('DOMContentLoaded', function() {
-            const fallbackLink = document.createElement('a');
-            fallbackLink.href = 'pages/portfolio_homepage.html';
-            fallbackLink.textContent = 'Click here if you are not redirected automatically';
-            fallbackLink.style.color = 'white';
-            fallbackLink.style.textDecoration = 'underline';
-            fallbackLink.style.display = 'block';
-            fallbackLink.style.marginTop = '1rem';
-            
-            setTimeout(function() {
-                document.querySelector('.loader-container').appendChild(fallbackLink);
-            }, 3000);
-        });
-    </script>
-  <script id="dhws-errorTracker" src="/public/dhws-error-tracker.js"></script>
-  <script id="dhws-elementInspector" src="/public/dhws-web-inspector.js"></script>
-<script id="dhws-dataInjector" src="public/dhws-data-injector.js"></script>
+    <p>If you are not redirected automatically, <a href="/pages/portfolio_homepage.html">click here</a>.</p>
 </body>
 </html>

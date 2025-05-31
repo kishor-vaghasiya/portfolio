@@ -1,0 +1,39 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "**/*",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/pages/portfolio_homepage.html"
+    },
+    {
+      "src": "/index.html",
+      "dest": "/pages/portfolio_homepage.html"
+    },
+    {
+      "src": "/projects",
+      "dest": "/pages/projects_showcase.html"
+    },
+    {
+      "src": "/contact",
+      "dest": "/pages/contact_resume.html"
+    },
+    {
+      "src": "/css/(.*)",
+      "dest": "/css/$1"
+    },
+    {
+      "src": "/public/(.*)",
+      "dest": "/public/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ]
+} 
