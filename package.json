@@ -1,0 +1,12 @@
+{
+  "name": "kishor-portfolio",
+  "version": "1.0.0",
+  "description": "Kishor Vaghasiya's Developer Portfolio",
+  "private": true,
+  "scripts": {
+    "start": "serve developer_portfolio"
+  },
+  "dependencies": {
+    "serve": "^14.2.1"
+  }
+} 
